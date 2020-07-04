@@ -1,0 +1,320 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.18362}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9                                                                    \ul ASSIGNMENT-1\ulnone\par
+1)\par
+my_file=open("kedar.txt","r")\par
+for line in my_file:\par
+        print(line)\par
+my_file.close()\par
+output:-\par
+hi\par
+i'm\par
+kedar\par
+cse-B\par
+gitam\par
+banglore\par
+2)\par
+my_file=open("kedar1.txt","t")\par
+n=int(input("enter no.of lines to read:")\par
+i=0\par
+for line in my_file:\par
+       if i<n:\par
+           print(line)\par
+           i+=1\par
+      else:\par
+            break\par
+my_file.close()\par
+output:-\par
+enter no.of lines to read: 5\par
+hi\par
+i'm\par
+keadr\par
+cse-B\par
+gitam\par
+3)\par
+def file_read(fname):\par
+        from itertools import islice\par
+        with open(fname, "w") as myfile:\par
+            myfile.write("python excercises\\n")\par
+            myfile.write("java excercises\\n")\par
+        txt = open(fname)\par
+        print(txt.read())\par
+file_read('abc.txt')\par
+output:-\par
+python excercises\par
+java excercises\par
+4)\par
+my_file=open("pavan2.txt","r")\par
+n=int (input ("enter no.of lines to read:"))\par
+for line in (my_file.readlines() [-n:]):\par
+               print(line)\par
+my_file.close()\par
+output:-\par
+enter no.of lines to read: 3\par
+cse-B\par
+gitam\par
+banglore\par
+5)\par
+my_file=open("kedar2.txt","r")\par
+a=""\par
+for line in my_file:\par
+       a=a+line\par
+print(a)\par
+my_file.close()\par
+output:-\par
+hi\par
+i'm\par
+kedar\par
+cse-B\par
+gitam\par
+banglore\par
+6)\par
+my_file=open("kedar2.txt","r")\par
+l=[]\par
+for line in my_file:\par
+       l.append(line)\par
+print(l)\par
+my_file.close()\par
+['hi\\n', "i'm\\n",  'kedar\\n',  'cse-B\\n',   'gitam\\n',   'banglore\\n']\par
+7)\par
+my_file=open("kedar2.txt","r")\par
+l=[]\par
+for line in my_file:\par
+       l.append(line)\par
+print(l)\par
+my_file.close()\par
+output:-\par
+  ['hi\\n', "i'm\\n",  'kedar\\n',  'cse-B\\n',   'gitam\\n',   'banglore\\n']\par
+8)\par
+my_file=open("kedar2.txt","r")\par
+count=0\par
+for line in my_file:\par
+        count+=1\par
+print("no.of lines in kedar2.txt:",count)\par
+output:-\par
+no.of lines in pavan2.txt: 6\par
+9)\par
+import os\par
+size=os.path.getsize("pavan2.txt")\par
+print("size of kedar2.txt:",size,"bytes")\par
+output:-\par
+size of kedar 2.txt: 55 bytes\par
+10)\par
+my_file1=open("kedar2.txt","r")\par
+my_file2=open("kedar3.txt","w")\par
+for line in my_file1:\par
+       my_file2.write(line)\par
+my_file3=open("kedar3.txt","r")\par
+for line in my_file3:\par
+       print(line)\par
+my_file1.close()\par
+my_file2.close()\par
+my_file3.close()\par
+output:-\par
+           hi\par
+           i'm\par
+           kedar\par
+           cse-B\par
+           gitam\par
+           banglore\par
+11)\par
+def sum_list(items):\par
+    sum_numbers = 0\par
+    for x in items:\par
+        sum_numbers += x\par
+    return sum_numbers\par
+print(sum_list([1,2,3]))\par
+output:- 6\par
+12)\par
+def multiply_list(items):\par
+    tot = 1\par
+    for x in items:\par
+       tot *= x\par
+    return tot\par
+print(multiply_list([1,2,4]))\par
+output:- 8\par
+13)\par
+def max_num_in_list(list):\par
+    max = list[0]\par
+    for a in list:\par
+        if a > max:\par
+            max = a\par
+    return max\par
+print(max_num_in_list([1, 2, 3]))\par
+output:- 3\par
+14)\par
+11= [10,20,30,40,10,20,30,40]\par
+12 =[]\par
+for i in 11:\par
+       if i not in 12:\par
+               12.append(i)\par
+         else:\par
+                  continue\par
+print("after removing duplicates:")\par
+print("list:",12)\par
+output:-\par
+after removing duplicates:\par
+list:  [10,  20,  30,  40]   \par
+15)\par
+l = []\par
+if not l:\par
+    print("list is empty")\par
+output:- list is empty\par
+ 16)\par
+11=[10,20,30,40]\par
+12=[]\par
+for i in 11:\par
+       12.append(i)\par
+print(12)\par
+17)\par
+11=['red','green','white','black','pink','yellow']\par
+12=[]\par
+i=0\par
+while i<=len(11):\par
+      if i==0 or i==4 or i==5:\par
+             i+=1\par
+             continue\par
+      else:\par
+               12.append(11[i])\par
+                 i+=1\par
+print("after removing 0th,4th and 5th positions:")\par
+print("list:",12)   \par
+output:-\par
+after removing 0th, 4th and 5th positions:\par
+list: ['green',   'white',  'black']\par
+18)\par
+11=[1,2,3,4,5,6,7,8,9,10]\par
+12=[]\par
+for i in 11:\par
+       if i%2==0:\par
+             continue\par
+        else:\par
+                    12.append(i)\par
+print("after removing even numbers from list:")\par
+print("list:",12)\par
+output:-\par
+after removing even numbers from list:\par
+list:   [1,  3,   5,  7,  9]\par
+19)\par
+from random import shuffle\par
+l=[1,2,3,4,5,6,7,8,9,10]\par
+shuffle(l)\par
+print(l)\par
+output:- [ 9,   7,   10,   8,   1,   6,   4,   3,   2,   5]\par
+20)\par
+11=[10,20,30,40,50,60,70,80,90,100]\par
+12=[1,2,3,4,5,6,7,8,9,10]\par
+13=[]\par
+if len(11)==len(12)\par
+          i,j=0,0\par
+           while i<len(11) and j<len(12):\par
+                13.append(11[i]-12[j])\par
+                i+=1\par
+                j+=1\par
+           print("differences between two lists:",13)\par
+      else:\par
+            print("no.of elements are different .not able to do difference")\par
+output:-\par
+    difference between two lists:   [9,   18,   27,   36,   45,   54,   63,   72,   81,   90]      \par
+\par
+                                                    \ul ASSIGNMENT-2\par
+1)\par
+\ulnone for i in range(1,101):\par
+    if i%3==0 and i%5!=0:\par
+        print("Fizz",end=" ")\par
+    elif i%5==0 and i%3!=0:\par
+        print("Buzz",end=" ")\par
+    elif i%3==0 and i%5==0:\par
+        print("FizzBuzz",end=" ")\par
+    else:\par
+        print(i,end=" ")\par
+output:-\par
+1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz Fizz 22 23 Fizz Buzz 26 Fizz 28 29 FizzBuzz 31 32 Fizz 34 Buzz Fizz 37 38 Fizz Buzz 41 Fizz 43 44 FizzBuzz 46 47 Fizz 49 Buzz Fizz 52 53 Fizz Buzz 56 Fizz 58 59 FizzBuzz 61 62 Fizz 64 Buzz Fizz 67 68 Fizz Buzz 71 Fizz 73 74 FizzBuzz 76 77 Fizz 79 Buzz Fizz 82 83 Fizz Buzz 86 Fizz 88 89 FizzBuzz 91 92 Fizz 94 Buzz Fizz 97 98 Fizz Buzz \ul\par
+2)\par
+\ulnone 11=[10,10,20,30,30,20,20]\ul\par
+\ulnone print("before removing connective duplicaes:")\par
+print("List:",11)\par
+l=len(11)\par
+12=[]\par
+i=0\par
+while i<l-1:\par
+    j=i+1\par
+    if 11[i]==11[j]:\par
+        12.append(11[i])\par
+        i+=2\par
+    else:\par
+        12.append(11[i])\par
+        i+=1\par
+while i<1:\par
+    12.append(11[i])\par
+    i+=1\par
+print("after removing consecutive duplicates:")\par
+print("List:",12)\par
+output:-\par
+Before removing consecutive duplicates:")\par
+list :[10,    10,   20,   30,   20,   20]\par
+after removing consecutive duplicates:\par
+list: [10,   20,   30,   20]\par
+3)\par
+11=[10,20,30,40,10,20,30,40]\par
+print("before finding unique elements in list:")\par
+print("list:",11)\par
+12=list()\par
+for i in 11:\par
+    if i not in 12:\par
+        12.append(i)\par
+    else:\par
+        continue\par
+print("after finding unique elements in list:")\par
+print("List:",12)   \par
+ output:-\par
+before finding unique elements in list:\par
+list: [10,  20,  30,  40,  10,  20,  30,  40]\par
+after finding unique elements in list:\par
+list:  [10,  20,  30,  40]\par
+4)\par
+def ran(num):\par
+h=int(input("Enter the upper range:"))\par
+l=int(input("Enter the lower range:"))\par
+if num>h:\par
+print("Entered number is not in given rannge.It is high")\par
+elif num<l:\par
+print("Entered number is not in given rannge.It is low")\par
+else:\par
+print("Entered number is in given rannge")\par
+a=int(input("Enter a number:"))\par
+ran(a)\par
+output:-\par
+Enter a number:40\par
+Enter the upper range:20\par
+Enter the lower range:5\par
+Entered number is not in given rannge.It is high\par
+5)\par
+def cal(a):\par
+u=0\par
+l=0\par
+for i in a:\par
+if i.isupper():\par
+u+=1\par
+if i.islower():\par
+l+=1\par
+print("No.of upper case letters:",u)\par
+print("No.of lower case letters:",l)\par
+s=input("Enter a string:")\par
+cal(s)\par
+In [ ]:\par
+Before finding unique elements in list:\par
+List: [10, 20, 30, 40, 10, 20, 30, 40]\par
+After finding unique elements in list:\par
+List: [10, 20, 30, 40]\par
+Enter a number:40\par
+Enter the upper range:20\par
+Enter the lower range:5\par
+Entered number is not in given rannge.It is high\par
+output:-\par
+Enter a string: 'Hello Mr. Rogers, how are you this fine Tuesday?'\par
+No.of upper case letters: 4\par
+No.of lower case letters: 33\par
+\par
+}
+ 
